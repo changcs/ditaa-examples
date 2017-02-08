@@ -12,7 +12,21 @@ $ mkdir -p ~/.emacs.d/elpa/contrib/scripts
 
 $ cp org-mode/contrib/scripts/ditaa.jar ~/.emacs.d/elpa/contrib/scripts
 
+Setting for emacs:
+  (org-babel-do-load-languages 'org-babel-load-languages '((ditaa . t) (plantuml . t) (dot . t)))
 
+  (add-hook 'org-babel-after-execute-hook 'bh/display-inline-images 'append)
+
+  ; Make babel results blocks lowercase
+  (setq org-babel-results-keyword "results")
+
+  (defun bh/display-inline-images ()
+    (condition-case nil
+      (org-display-inline-images)
+    (error nil)))
+  (setq org-plantuml-jar-path (expand-file-name "~/java/plantuml.jar"))
+  ; Disable confirm prompt
+  (setq org-confirm-babel-evaluate nil)
 #+END_QUOTE
 
 *** Unable to eval code blocks?

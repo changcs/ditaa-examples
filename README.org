@@ -1,4 +1,4 @@
-* Ditaa examples for orgmode
+* Ditaa and other drawing solution examples for orgmode
 
 ** In case you have no time to check [[http://ditaa.sourceforge.net/][DIagrams Through Ascii Art]]
 
@@ -31,3 +31,19 @@ $ rm *.elc
 ** Could not find ditaa.jar?
 
 - Check variable org-ditaa-jar-path.
+
+* Graphviz
+
+- Install necessary packages
+#+BEGIN_QUOTE
+# apt-get install graphviz 
+
+#+END_QUOTE
+
+* Plantuml
+
+- Set necessary variables
+
+#+BEGIN_QUOTE
+(setq org-plantuml-jar-path (expand-file-name "~/java/plantuml.jar"))
+#+END_QUOTE

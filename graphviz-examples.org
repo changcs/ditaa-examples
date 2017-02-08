@@ -1,0 +1,44 @@
+* Graphviz Examples
+
+- For more information, refer to [[http://www.cnblogs.com/chenfanyu/archive/2013/01/27/2878845.html][Emacs Org-mode Drawing.]]
+
+#+BEGIN_SRC dot :file images/test_graphviz.png :cmdline -Kdot -Tpng
+digraph G {
+  size="8,6"
+  ratio=expand
+  edge [dir=both]
+  plcnet [shape=box, label="PLC Network"]
+  subgraph cluster_wrapline {
+    label="Wrapline Control System"
+    color=purple
+    subgraph {
+    rank=same
+    exec
+    sharedmem [style=filled, fillcolor=lightgrey, shape=box]
+    }
+    edge[style=dotted, dir=none]
+    exec -> opserver
+    exec -> db
+    plc -> exec
+    edge [style=line, dir=both]
+    exec -> sharedmem
+    sharedmem -> db
+    plc -> sharedmem
+    sharedmem -> opserver
+  }
+  plcnet -> plc [constraint=false]
+  millwide [shape=box, label="Millwide System"]
+  db -> millwide
+
+  subgraph cluster_opclients {
+    color=blue
+    label="Operator Clients"
+    rankdir=LR
+    labelloc=b
+    node[label=client]
+    opserver -> client1
+    opserver -> client2
+    opserver -> client3
+  }
+}
+#+end_src

@@ -4,6 +4,8 @@
 *** In case you have no time to check [[http://ditaa.sourceforge.net/][DIagrams Through Ascii Art]]
 
 #+BEGIN_QUOTE
+# apt-get install openjdk-7-jre-headless
+
 $ mkdir images
 
 $ git clone git://orgmode.org/org-mode.git

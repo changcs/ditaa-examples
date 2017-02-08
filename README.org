@@ -1,0 +1,30 @@
+* Ditaa examples for orgmode
+
+** In case you have no time to check [[http://ditaa.sourceforge.net/][DIagrams Through Ascii Art]]
+
+#+BEGIN_QUOTE
+$ mkdir images
+
+$ git clone git://orgmode.org/org-mode.git
+
+$ mkdir -p ~/.emacs.d/elpa/contrib/scripts
+
+$ cp org-mode/contrib/scripts/ditaa.jar ~/.emacs.d/elpa/contrib/scripts
+
+
+#+END_QUOTE
+
+** Unable to eval code blocks?
+
+- This my be caused by [[http://emacs.stackexchange.com/questions/28441/org-mode-9-unable-to-eval-code-blocks][Org-mode 9: unable to eval code-blocks]]. Possible solution:
+
+#+BEGIN_QUOTE
+$ cd .emacs.d
+$ cd elpa
+$ cd org-20161102
+$ rm *.elc
+#+END_QUOTE
+
+** Could not find ditaa.jar?
+
+- Check variable org-ditaa-jar-path.

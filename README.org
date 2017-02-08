@@ -20,8 +20,11 @@ $ cp org-mode/contrib/scripts/ditaa.jar ~/.emacs.d/elpa/contrib/scripts
 
 #+BEGIN_QUOTE
 $ cd .emacs.d
+
 $ cd elpa
+
 $ cd org-20161102
+
 $ rm *.elc
 #+END_QUOTE
 

@@ -1,6 +1,7 @@
 * Ditaa and other drawing solution examples for orgmode
 
-** In case you have no time to check [[http://ditaa.sourceforge.net/][DIagrams Through Ascii Art]]
+** Ditaa
+*** In case you have no time to check [[http://ditaa.sourceforge.net/][DIagrams Through Ascii Art]]
 
 #+BEGIN_QUOTE
 $ mkdir images
@@ -14,7 +15,7 @@ $ cp org-mode/contrib/scripts/ditaa.jar ~/.emacs.d/elpa/contrib/scripts
 
 #+END_QUOTE
 
-** Unable to eval code blocks?
+*** Unable to eval code blocks?
 
 - This my be caused by [[http://emacs.stackexchange.com/questions/28441/org-mode-9-unable-to-eval-code-blocks][Org-mode 9: unable to eval code-blocks]]. Possible solution:
 
@@ -28,11 +29,11 @@ $ cd org-20161102
 $ rm *.elc
 #+END_QUOTE
 
-** Could not find ditaa.jar?
+*** Could not find ditaa.jar?
 
 - Check variable org-ditaa-jar-path.
 
-* Graphviz
+** Graphviz
 
 - Install necessary packages
 #+BEGIN_QUOTE
@@ -40,10 +41,14 @@ $ rm *.elc
 
 #+END_QUOTE
 
-* Plantuml
+** Plantuml
 
 - Set necessary variables
 
 #+BEGIN_QUOTE
 (setq org-plantuml-jar-path (expand-file-name "~/java/plantuml.jar"))
 #+END_QUOTE
+
+** References
+
+1. [[http://www.cnblogs.com/chenfanyu/archive/2013/01/27/2878845.html][Emacs Org-mode Drawing]]

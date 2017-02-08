@@ -1,0 +1,20 @@
+* Plantuml Examples
+
+- For more information, refer to [[http://www.cnblogs.com/chenfanyu/archive/2013/01/27/2878845.html][Emacs Org-mode Drawing.]]
+
+#+BEGIN_SRC plantuml :file images/test_uml.png  :cmdline -charset UTF-8
+title Example Sequence Diagram
+activate Client
+Client -> Server: Session Initiation
+note right: Client requests new session
+activate Server
+Client <-- Server: Authorization Request
+note left: Server requires authentication
+Client -> Server: Authorization Response
+note right: Client provides authentication details
+Server --> Client: Session Token
+note left: Session established
+deactivate Server
+Client -> Client: Saves token
+deactivate Client
+#+END_SRC

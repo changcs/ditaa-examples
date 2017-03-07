@@ -33,7 +33,7 @@ Setting for emacs:
 
 *** Unable to eval code blocks?
 
-- This my be caused by [[http://emacs.stackexchange.com/questions/28441/org-mode-9-unable-to-eval-code-blocks][Org-mode 9: unable to eval code-blocks]]. Possible solution:
+- This may be caused by [[http://emacs.stackexchange.com/questions/28441/org-mode-9-unable-to-eval-code-blocks][Org-mode 9: unable to eval code-blocks]]. Possible solution:
 
 #+BEGIN_QUOTE
 $ cd .emacs.d
